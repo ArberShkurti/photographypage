@@ -11,7 +11,7 @@ const ImagesCollections = () => {
         <ul className="images-collection-container">
             {imagesList.map((imgUrl, index) => {
                     return (
-                        <li className={index % 2 === 0 ? "item short" : "item tall"}>
+                        <li className={index % 2 !== 0 ? "item short" : "item tall"}>
                             <figure>
                                 <img src={imgUrl} alt="collection" />
                             </figure>

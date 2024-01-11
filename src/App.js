@@ -1,9 +1,11 @@
 import './App.scss';
 import HeroSections from './Components/HeroSections';
-import { Container } from 'react-bootstrap';
+import { Container, Row, Col} from 'react-bootstrap';
 import Header from './Components/Header';
 import MenuOverlay from './Components/MenuOverlay';
 import ImagesCollections from './Components/ImagesCollections';
+import InformationSection from './Components/InformationSection';
+import ContactForm from './Components/ContactForm';
 import { useState } from 'react';
 
 function App() {
@@ -15,16 +17,22 @@ function App() {
           <Header navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen}/>
           <MenuOverlay navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen}/>
           <HeroSections />
+          <InformationSection />
           <ImagesCollections />
-         </Container>
-        <div>
-        <img src='./images/image-1.jpg' width={200} margin-bottom={50}/>
-        <img src='./images/image-2.jpg' width={200}/>
-        <img src='./images/image-3.jpg' width={200}/>
-        <img src='./images/image-4.jpg' width={200}/>
-        </div>
+          <Container className='footer-section'>
+            <Row>
+              <Col>
+              <div className='mt-1'>
+                <img src="../icons/logoash.png"></img>
+              </div>
+              </Col>
+                <Col className='mt-5' >
+                <ContactForm />
+                </Col>
 
-     
+            </Row>
+          </Container>
+         </Container>     
     </div>
 
   );
