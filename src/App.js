@@ -18,7 +18,8 @@ function App() {
           <MenuOverlay navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen}/>
           <HeroSections />
           <InformationSection />
-          <ImagesCollections />
+          <div className='foto' >del kjo</div>
+          {/* <ImagesCollections /> */}
           <Container className='footer-section'>
             <Row>
               <Col>
